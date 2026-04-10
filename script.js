@@ -154,6 +154,13 @@ const buttons = document.querySelectorAll("button")
 
 buttons.forEach((button)=>{
     button.addEventListener("click",(el)=>{
-        console.log("Tu as cliqué sur le bouton ")
+        const id = el.target.dataset.id
+        const autre= el.target.dataset.autre
+        document.querySelector("body > section:nth-child(4) > p").textContent = `Tu as cliqué sur ${id} : ${autre}`
     })
 })
+
+import { isMajor ,isMinor} from "./utils.js"
+
+isMajor(18)
+isMinor(15)
